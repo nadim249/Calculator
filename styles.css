@@ -1,75 +1,71 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
 }
-body{
-    padding: 0;
-    margin: 0;
-    
-     background: linear-gradient(to right, #6293aa,#a562ae); 
-}
-.calculator-grid{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows:minmax(120px, auto) repeat(5, 100px);
+body {
+  padding: 0;
+  margin: 0;
 
-
+  background: linear-gradient(to right, #6293aa, #a562ae);
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calculator-grid > button{
-    cursor: pointer;
-    font-size: 2rem;
-    border: 2px solid white;
-    border-radius: 10px;
-    outline: none;
-    background-color: rgba(151, 204, 209, 0.75);
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgba(151, 204, 209, 0.75);
+}
+#ac {
+  background-color: rgba(195, 39, 39, 0.729);
+}
+#del {
+  background-color: rgb(217, 217, 61);
+}
+#equal {
+  background-color: green;
+}
+.calculator-grid > button:hover {
+  background-color: rgba(125, 171, 214, 0.9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  border-radius: 8px;
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: rgba(248, 249, 250, 0.954);
+  font-size: 2.5rem;
+}
 
-}
-#ac{
-    background-color: rgba(195, 39, 39, 0.729);
-}
-#del{
-    background-color: rgb(217, 217, 61);
-}
-#equal{
-    background-color: green;
-}
-.calculator-grid > button:hover{
-    background-color: rgba(125, 171, 214, 0.9);
-}
-.span-two{
-    grid-column: span 2;
-}
-.output{
-    border-radius: 8px;
-    grid-column: 1/ -1;
-    background-color: rgba(0, 0, 0,.75);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
-}
-.output .previous-operand 
-{
-    color: rgba(255,255,255,.75);
-    font-size: 1.5rem;
-    
-}
-.output .current-operand 
-{
-    color: rgba(248, 249, 250, 0.954);
-    font-size: 2.5rem;
-    
-}
 @media only screen and (max-width: 600px) {
-    body {
-      min-width: fit-content;
-    }
+  body {
+    min-width: fit-content;
   }
+}
